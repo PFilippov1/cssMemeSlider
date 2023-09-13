@@ -1,0 +1,131 @@
+html {
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vw;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(17, 17, 19, 0.923);
+}
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider {
+  display: flex;
+  width: 90%;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  border-radius: 0.625rem;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+}
+
+.images img {
+  height: 30rem;
+  width: 100%;
+  overflow: hidden;
+  background: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease;
+  margin-right: -100%;
+}
+
+.images input {
+  display: none;
+}
+
+.dots {
+  display: flex;
+  width: 18.75rem;
+  justify-content: center;
+  margin: 0.625rem;
+}
+
+.dots label {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: #3d8ae7;
+  border: 0.125rem solid #3d8ae7;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin: 0.4rem;
+}
+
+.dots label:active {
+  background-color: #000;
+}
+.dots label:checked {
+  background-color: #000;
+}
+
+.dots label:hover {
+  background: #fff;
+}
+
+#image1:checked ~ .meme1 {
+  margin-right: 0%;
+  width: 100%;
+}
+
+#image2:checked ~ .meme2 {
+  margin-right: -0%;
+  width: 100%;
+}
+
+#image3:checked ~ .meme3 {
+  margin-right: -0%;
+  width: 100%;
+}
+
+#image4:checked ~ .meme4 {
+  margin-right: -300%;
+  width: 100%;
+}
+
+/* --------------------------------------- */
+.container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 18.75rem;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
+}
+
+.slide {
+  color: #fff;
+  flex: none;
+  scroll-snap-align: start;
+  width: 18.75rem;
+  text-align: center;
+}
+
+.dots-text__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* -------------------------------- */
