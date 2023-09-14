@@ -1,4 +1,4 @@
-html {
+/* html {
   flex-wrap: wrap;
   width: 100vw;
   height: 100vw;
@@ -101,7 +101,9 @@ body {
   width: 100%;
 }
 
-/* --------------------------------------- */
+
+
+
 .container {
   display: flex;
   overflow-x: scroll;
@@ -126,6 +128,165 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+} */
+
+html {
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* -------------------------------- */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* align-content:center; */
+  background: rgba(17, 17, 19, 0.923);
+}
+.slider-wrapper {
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 5vh;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  height: 50rem;
+  width: 100%;
+  background: no-repeat;
+  transition: all 0.5s ease;
+  border-radius: 0.625rem;
+  /* object-fit: cover; */
+  object-fit: contain;
+  margin-right: -100%;
+  transition: all 0.5s ease;
+}
+
+.slide img {
+  /* height: 100%; */
+  height: 90vh;
+  width: 100%;
+  /* object-fit:cover; */
+  /* object-fit:contain; */
+  /* object-fit: fill; */
+  /* transition: all 0.5s ease; */
+  border-radius: 0.625rem;
+}
+
+.radio-btns {
+  display: none;
+}
+
+.dots {
+  display: flex;
+  width: 18.75rem;
+  justify-content: center;
+  margin: 0.625rem;
+}
+
+.dots label {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: #3d8ae7;
+  border: 0.125rem solid #3d8ae7;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin: 0.4rem;
+}
+
+.dots label:active {
+  background-color: #000;
+}
+.dots label:checked {
+  background-color: #000;
+}
+
+.dots label:hover {
+  background: #fff;
+}
+
+#image1:checked ~ .meme1 {
+  margin-right: 0;
+  width: 100%;
+}
+
+#image2:checked ~ .meme2 {
+  margin-right: 0;
+  width: 100%;
+}
+
+#image3:checked ~ .meme3 {
+  margin-right: 0;
+  width: 100%;
+}
+
+#image4:checked ~ .meme4 {
+  margin-right: 0;
+  width: 100%;
+}
+
+.slide p {
+  color: #fff;
+  transition: all 0.5s ease;
+  visibility: hidden;
+}
+
+#image1:checked ~ .meme1 p {
+  margin-right: -0%;
+  width: 100%;
+  visibility: visible;
+}
+
+#image2:checked ~ .meme2 p {
+  margin-right: -0%;
+  width: 100%;
+  visibility: visible;
+}
+
+#image3:checked ~ .meme3 p {
+  margin-right: -0%;
+  width: 100%;
+  visibility: visible;
+}
+
+#image4:checked ~ .meme4 p {
+  margin-right: -0%;
+  width: 100%;
+  visibility: visible;
+}
+
+.dots-text__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider input {
+  display: none;
+}
