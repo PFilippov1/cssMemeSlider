@@ -15,7 +15,6 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  /* align-content:center; */
   background: rgba(17, 17, 19, 0.923);
 }
 .slider-wrapper {
@@ -53,18 +52,18 @@ body {
   border-radius: 0.625rem;
 }
 
-.radio-btns {
-  display: none;
-}
+
 
 .dots {
   display: flex;
-  /* width: 14.75rem; */
   justify-content: center;
   margin: 0.3rem;
 }
 
 .dots label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
@@ -76,6 +75,7 @@ body {
   outline-offset: 10px;
 }
 .lebel__wrapper {
+ 
 }
 
 .dots label:active {
@@ -111,7 +111,6 @@ body {
   color: #fff;
   font-size: 1.5rem;
   transition: all 0.5s ease;
-  /* justify-content: center; */
   visibility: hidden;
 }
 
@@ -135,7 +134,7 @@ body {
   visibility: visible;
 }
 
-.dots-text__wrapper {
+.dots__wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -143,9 +142,63 @@ body {
   justify-content: flex-end;
 }
 .slider input {
-  /* display: none; */
   width: 0;
   height: 0;
+}
+
+input:active {
+  background-color: #000;
+}
+
+input:active {
+  background-color: #000;
+}
+input:active {
+  background-color: #000;
+}
+
+.text_wrapper p {
+  color: #fff;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+  display: none;
+ 
+}
+
+#image1:checked ~ .dots-text__wrapper .text_wrapper p:nth-of-type(1),
+#image2:checked ~ .dots-text__wrapper .text_wrapper p:nth-of-type(2),
+#image3:checked ~ .dots-text__wrapper .text_wrapper p:nth-of-type(3),
+#image4:checked ~ .dots-text__wrapper .text_wrapper p:nth-of-type(4) {
+  transition: all 0.5s ease;
+  display: block;
+}
+
+
+.dots-text__wrapper {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 0px;
+}
+
+.dots__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: 0;
 }
 
 input:active {
@@ -163,13 +216,13 @@ input:active {
   .dots-text__wrapper {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-
   .slide {
     align-items: center;
     height: 20rem;
   }
 }
+
