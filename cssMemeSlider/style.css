@@ -57,7 +57,8 @@ body {
 .dots {
   display: flex;
   justify-content: center;
-  margin: 0.3rem;
+  align-items: center;
+  flex-direction: row;
 }
 
 .dots label {
@@ -67,21 +68,24 @@ body {
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background: #3d8ae7;
+  /* background: #3d8ae7; */
   border: 0.125rem solid #3d8ae7;
   cursor: pointer;
   transition: all 0.5s ease;
-  margin: 0.4rem;
-  outline-offset: 10px;
+  margin-left: 0.4rem;
+  outline-offset: 0.6rem;
 }
 .lebel__wrapper {
+  margin: 0;
+  padding: 0;
  
 }
 
-.dots label:active {
-  background-color: #000;
+.dots label {
+  background-color: #3d8ae7;
 }
-.dots label:checked {
+
+.dots label:active {
   background-color: #000;
 }
 
@@ -136,30 +140,22 @@ body {
 
 .dots__wrapper {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
 }
+
 .slider input {
   width: 0;
   height: 0;
 }
 
-input:active {
-  background-color: #000;
-}
 
-input:active {
-  background-color: #000;
-}
-input:active {
-  background-color: #000;
-}
 
 .text_wrapper p {
   color: #fff;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   color: #fff;
@@ -180,20 +176,13 @@ input:active {
 
 .dots-text__wrapper {
   position: absolute;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  bottom: 0px;
+  bottom: 5%;
 }
 
-.dots__wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
 .slider input {
   width: 0;
   height: 0;
@@ -201,16 +190,6 @@ input:active {
   z-index: 0;
 }
 
-input:active {
-  background-color: #000;
-}
-
-input:active {
-  background-color: #000;
-}
-input:active {
-  background-color: #000;
-}
 
 @media (max-width: 501px) {
   .dots-text__wrapper {
